@@ -177,6 +177,9 @@ app.get('/code/:id', requireAuth, async (req, res) => {
     res.status(500).json({ message: 'Internal Server Error', error: error.message });
   }
 });
+app.get("/", async (req, res) => {
+  res.status(200).json({"hello"})
+})
 
 // Start the server
 const PORT = process.env.PORT || 8000;
